@@ -74,8 +74,11 @@ cv_model = api_namespace.model(
 	description='Retrieve personal information from the CV by ID',
 )
 class PersonalResource(Resource):
+	"""Resource to handle personal information retrieval from a CV."""
+
 	@api_namespace.marshal_with(personal_model)
 	def get(self, cv_id):
+		"""Get personal information by CV ID."""
 		cv = get_cv_by_id(cv_id)
 		if not cv:
 			abort(404, 'CV not found')
@@ -88,8 +91,11 @@ class PersonalResource(Resource):
 	description='Retrieve work experience information from the CV by ID',
 )
 class ExperienceResource(Resource):
+	"""Resource to handle work experience retrieval from a CV."""
+
 	@api_namespace.marshal_with(experience_model, as_list=True)
 	def get(self, cv_id):
+		"""Get work experience by CV ID."""
 		cv = get_cv_by_id(cv_id)
 		if not cv:
 			abort(404, 'CV not found')
@@ -102,8 +108,11 @@ class ExperienceResource(Resource):
 	description='Retrieve education information from the CV by ID',
 )
 class EducationResource(Resource):
+	"""Resource to handle education information retrieval from a CV."""
+
 	@api_namespace.marshal_with(education_model, as_list=True)
 	def get(self, cv_id):
+		"""Get education information by CV ID."""
 		cv = get_cv_by_id(cv_id)
 		if not cv:
 			abort(404, 'CV not found')
@@ -115,8 +124,11 @@ class EducationResource(Resource):
 	params={'cv_id': 'CV ID'}, description='Retrieve full CV information by ID'
 )
 class CVResource(Resource):
+	"""Resource to handle full CV retrieval by ID."""
+
 	@api_namespace.marshal_with(cv_model)
 	def get(self, cv_id):
+		"""Get full CV by CV ID."""
 		cv = get_cv_by_id(cv_id)
 		if not cv:
 			abort(404, 'CV not found')
