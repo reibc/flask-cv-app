@@ -20,4 +20,5 @@
     - `flask show experience {id}`
     - `flask show personal {id}`
     - `flask show education {id}`
+    
     NOTE: Replace `{id}` with an integer matching the CV id from `cv_data.json`
