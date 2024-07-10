@@ -9,6 +9,6 @@
     - [*] `/experience/{id}` - get the work experience 
     - [*] `/education/{id}` - get the education details
 * [*] Add Flask CLI commands that prints the data for each API route
-* [] Create docker images for the application
+* [*] Create docker images for the application
 * [*] Use Swagger for API testing purposes
 * [*] Use Ruff to ensure code quality

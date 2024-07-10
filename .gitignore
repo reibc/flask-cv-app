@@ -1,3 +1,6 @@
+# folders
 /env
-/.ruff_cache
 /__pycache__
+/.ruff_cache
+/.vscode
+/app/__pycache__
