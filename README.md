@@ -8,12 +8,12 @@
 ## Run in Docker
 1) Open cmd in the folder where Dockerfile is located (`flask-simple-cv-reader`)
 2) Build the docker image by running the command `docker build -t flask-simple-cv-reader .`
-3) Run the docker container `docker run -p 5000:5000 flask-simple-cv-reader`
+3) Run the docker container `docker run -d -p 5000:5000 flask-simple-cv-reader`
 
 # Usage
 
 ## API
-* API routes are available on `localhost:/5000/swagger`
+* API routes are available on `localhost:5000/swagger`
 
 ## Flask-CLI
 * The following CLI commands are available:
